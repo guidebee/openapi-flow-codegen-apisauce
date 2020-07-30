@@ -28,7 +28,7 @@ export async function writeClientIndex(
     exportSchemas: boolean
 ): Promise<void> {
     await writeFile(
-        path.resolve(outputPath, 'index.ts'),
+        path.resolve(outputPath, 'index.js'),
         templates.index({
             exportCore,
             exportServices,

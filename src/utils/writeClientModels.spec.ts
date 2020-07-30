@@ -38,6 +38,6 @@ describe('writeClientModels', () => {
 
         await writeClientModels(models, templates, '/');
 
-        expect(writeFile).toBeCalledWith('/Item.ts', 'dummy');
+        expect(writeFile).toBeCalledWith('/Item.js', 'dummy');
     });
 });

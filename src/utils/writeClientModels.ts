@@ -13,7 +13,7 @@ import { Templates } from './registerHandlebarTemplates';
  */
 export async function writeClientModels(models: Model[], templates: Templates, outputPath: string): Promise<void> {
     for (const model of models) {
-        const file = path.resolve(outputPath, `${model.name}.ts`);
+        const file = path.resolve(outputPath, `${model.name}.js`);
         const templateResult = templates.model(model);
         await writeFile(file, format(templateResult));
     }

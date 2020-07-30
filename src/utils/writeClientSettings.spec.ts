@@ -25,6 +25,6 @@ describe('writeClientSettings', () => {
 
         await writeClientSettings(client, templates, '/', HttpClient.FETCH);
 
-        expect(writeFile).toBeCalledWith('/OpenAPI.ts', 'dummy');
+        expect(writeFile).toBeCalledWith('/OpenAPI.js', 'dummy');
     });
 });

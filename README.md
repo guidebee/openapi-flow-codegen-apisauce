@@ -1,17 +1,21 @@
-# OpenAPI Typescript Codegen
+# OpenAPI Flow Codegen
 
-[![NPM](https://badgen.net/npm/v/openapi-typescript-codegen)](https://www.npmjs.com/package/openapi-typescript-codegen)
-[![License](https://badgen.net/npm/license/openapi-typescript-codegen)](https://www.npmjs.com/package/openapi-typescript-codegen)
-[![Build Status](https://badgen.net/travis/ferdikoomen/openapi-typescript-codegen/master)](https://travis-ci.org/ferdikoomen/openapi-typescript-codegen)
-[![Codecov](https://codecov.io/gh/ferdikoomen/openapi-typescript-codegen/branch/master/graph/badge.svg)](https://codecov.io/gh/ferdikoomen/openapi-typescript-codegen)
-[![Quality](https://badgen.net/lgtm/grade/javascript/g/ferdikoomen/openapi-typescript-codegen)](https://lgtm.com/projects/g/ferdikoomen/openapi-typescript-codegen)
+This fork for flow code generation is inspired by the beautiful `openapi-typescript-codegen` package.
+I kept the original code & documentation in tact as most of it supports flow as well. It's mostly the
+hbs templates and core client logic that drive this generator. Cudos to @ferdikoomen for making it so incredibly easy to port this for flow.
 
-> NodeJS library that generates Typescript clients based on the OpenAPI specification.
+[![NPM](https://badgen.net/npm/v/openapi-flow-codegen)](https://www.npmjs.com/package/openapi-flow-codegen)
+[![License](https://badgen.net/npm/license/openapi-flow-codegen)](https://www.npmjs.com/package/openapi-flow-codegen)
+[![Build Status](https://badgen.net/travis/tomsiwik/openapi-flow-codegen/master)](https://travis-ci.org/tomsiwik/openapi-flow-codegen)
+[![Codecov](https://codecov.io/gh/tomsiwik/openapi-flow-codegen/branch/master/graph/badge.svg)](https://codecov.io/gh/tomsiwik/openapi-flow-codegen)
+[![Quality](https://badgen.net/lgtm/grade/javascript/g/tomsiwik/openapi-flow-codegen)](https://lgtm.com/projects/g/tomsiwik/openapi-flow-codegen)
+
+> NodeJS library that generates Flow clients based on the OpenAPI specification.
 
 #### Why?
 - Frontend ❤️ OpenAPI, but we do not want to use JAVA codegen in our builds.
 - Quick, lightweight, robust and framework agnostic.
-- Supports generation of Typescript clients.
+- Supports generation of Flow-typed clients.
 - Supports generations of fetch and XHR http clients.
 - Supports OpenAPI specification v2.0 and v3.0.
 - Supports JSON and YAML files for input.
@@ -20,7 +24,7 @@
 ## Known issues:
 - If you use enums inside your models / definitions then those enums are now
   inside a namespace with the same name as your model. This is called declaration
-  merging. However, Babel 7 now support compiling of Typescript and right now they
+  merging. However, Babel 7 now supports compiling of Flow and right now they
   do not support namespaces.
 
 
@@ -257,7 +261,7 @@ enum EnumWithStrings {
     /*
     * Used when the status of something has a warning
     */
-    Waring = 1,
+    Warning = 1,
     /*
     * Used when the status of something has an error
     */
@@ -281,6 +285,6 @@ OpenAPI.TOKEN = 'some-bearer-token';
 Depending on which swagger generator you use, you will see different output.
 For instance: Different ways of generating models, services, level of quality,
 HTTP client, etc. I've compiled a list with the results per area and how they
-compare against the openapi-typescript-codegen.
+compare against the openapi-flow-codegen.
 
-[Click here to see the comparison](https://htmlpreview.github.io/?https://github.com/ferdikoomen/openapi-typescript-codegen/blob/master/samples/index.html)
+[Click here to see the comparison](https://htmlpreview.github.io/?https://github.com/tomsiwik/openapi-flow-codegen/blob/master/samples/index.html)

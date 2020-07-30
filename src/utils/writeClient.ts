@@ -49,15 +49,15 @@ export async function writeClient(
 
     if (exportCore) {
         await mkdir(outputPathCore);
-        await copySupportFile('core/ApiError.ts', outputPath);
-        await copySupportFile('core/getFormData.ts', outputPath);
-        await copySupportFile('core/getQueryString.ts', outputPath);
-        await copySupportFile('core/isSuccess.ts', outputPath);
-        await copySupportFile('core/request.ts', outputPath);
-        await copySupportFile('core/RequestOptions.ts', outputPath);
-        await copySupportFile('core/requestUsingFetch.ts', outputPath);
-        await copySupportFile('core/requestUsingXHR.ts', outputPath);
-        await copySupportFile('core/Result.ts', outputPath);
+        await copySupportFile('core/ApiError.js', outputPath);
+        await copySupportFile('core/getFormData.js', outputPath);
+        await copySupportFile('core/getQueryString.js', outputPath);
+        await copySupportFile('core/isSuccess.js', outputPath);
+        await copySupportFile('core/request.js', outputPath);
+        await copySupportFile('core/RequestOptions.js', outputPath);
+        await copySupportFile('core/requestUsingFetch.js', outputPath);
+        await copySupportFile('core/requestUsingXHR.js', outputPath);
+        await copySupportFile('core/Result.js', outputPath);
     }
 
     if (exportServices) {
@@ -73,7 +73,7 @@ export async function writeClient(
 
     if (exportModels) {
         await mkdir(outputPathModels);
-        await copySupportFile('models/Dictionary.ts', outputPath);
+        await copySupportFile('models/Dictionary.js', outputPath);
         await writeClientModels(client.models, templates, outputPathModels);
     }
 

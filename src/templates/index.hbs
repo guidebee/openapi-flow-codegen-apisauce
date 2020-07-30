@@ -1,3 +1,4 @@
+// @flow
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
@@ -12,7 +13,7 @@ export { OpenAPI } from './core/OpenAPI';
 {{#if models}}
 
 {{#each models}}
-export { {{{this}}} } from './models/{{{this}}}';
+export * from './models/{{{this}}}';
 {{/each}}
 {{/if}}
 {{/if}}
@@ -20,7 +21,7 @@ export { {{{this}}} } from './models/{{{this}}}';
 {{#if models}}
 
 {{#each models}}
-export { ${{{this}}} } from './schemas/${{{this}}}';
+export * from './schemas/${{{this}}}';
 {{/each}}
 {{/if}}
 {{/if}}
@@ -28,7 +29,7 @@ export { ${{{this}}} } from './schemas/${{{this}}}';
 {{#if services}}
 
 {{#each services}}
-export { {{{this}}} } from './services/{{{this}}}';
+export * from './services/{{{this}}}';
 {{/each}}
 {{/if}}
 {{/if}}

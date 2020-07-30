@@ -1,15 +1,15 @@
 {
-    "name": "openapi-typescript-codegen",
+    "name": "openapi-flow-codegen",
     "version": "0.4.8",
     "description": "NodeJS library that generates Typescript or Javascript clients based on the OpenAPI specification.",
-    "author": "Ferdi Koomen",
-    "homepage": "https://github.com/ferdikoomen/openapi-typescript-codegen",
+    "author": "Tom Siwik",
+    "homepage": "https://github.com/tomsiwik/openapi-flow-codegen",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ferdikoomen/openapi-typescript-codegen.git"
+        "url": "git+https://github.com/tomsiwik/openapi-flow-codegen.git"
     },
     "bugs": {
-        "url": "https://github.com/ferdikoomen/openapi-typescript-codegen/issues"
+        "url": "https://github.com/tomsiwik/openapi-flow-codegen/issues"
     },
     "license": "MIT",
     "keywords": [
@@ -18,7 +18,7 @@
         "codegen",
         "generator",
         "client",
-        "typescript",
+        "flow",
         "javascript",
         "yaml",
         "json",
@@ -28,8 +28,8 @@
     ],
     "maintainers": [
         {
-            "name": "Ferdi Koomen",
-            "email": "info@madebyferdi.com"
+            "name": "Tom Siwik",
+            "email": "tom@wildjs.com"
         }
     ],
     "main": "dist/index.js",
@@ -40,7 +40,7 @@
     "files": [
         "bin/index.js",
         "dist/index.js",
-        "src/templates/**/*.ts"
+        "src/templates/**/*.js"
     ],
     "scripts": {
         "clean": "rimraf ./dist ./test/result ./coverage ./samples/examples",
@@ -50,10 +50,10 @@
         "test:update": "jest --updateSnapshot",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage",
-        "eslint": "eslint \"./src/**/*.ts\" \"./bin/index.js\"",
-        "eslint:fix": "eslint \"./src/**/*.ts\" \"./bin/index.js\" --fix",
-        "prettier": "prettier \"./src/**/*.ts\" \"./bin/index.js\" --check",
-        "prettier:fix": "prettier \"./src/**/*.ts\" \"./bin/index.js\" --write",
+        "eslint": "eslint \"./src/**/*.{js,ts}\" \"./bin/index.js\"",
+        "eslint:fix": "eslint \"./src/**/*.{js,ts}\" \"./bin/index.js\" --fix",
+        "prettier": "prettier \"./src/**/*.{js,ts}\" \"./bin/index.js\" --check",
+        "prettier:fix": "prettier \"./src/**/*.{js,ts}\" \"./bin/index.js\" --write",
         "codecov": "codecov --token=66c30c23-8954-4892-bef9-fbaed0a2e42b"
     },
     "dependencies": {
@@ -90,6 +90,6 @@
         "rollup": "2.23.0",
         "rollup-plugin-terser": "6.1.0",
         "rollup-plugin-typescript2": "0.27.1",
-        "typescript": "3.9.7"
+        "typescript": "^3.9.7"
     }
 }

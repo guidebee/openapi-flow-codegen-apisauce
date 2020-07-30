@@ -14,7 +14,7 @@ import { Templates } from './registerHandlebarTemplates';
  */
 export async function writeClientSettings(client: Client, templates: Templates, outputPath: string, httpClient: HttpClient): Promise<void> {
     await writeFile(
-        path.resolve(outputPath, 'OpenAPI.ts'),
+        path.resolve(outputPath, 'OpenAPI.js'),
         templates.settings({
             httpClient,
             server: client.server,
