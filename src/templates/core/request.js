@@ -6,6 +6,8 @@
 
 import { getFormData } from './getFormData';
 import { getQueryString } from './getQueryString';
+
+// $FlowFixMe
 import { OpenAPI } from './OpenAPI';
 import { RequestOptions } from './RequestOptions';
 import { requestUsingFetch } from './requestUsingFetch';
@@ -17,7 +19,7 @@ import { Result } from './Result';
  * @param options Request method options.
  * @returns Result object (see above)
  */
-export async function request(options: $Readonly<RequestOptions>): Promise<Result> {
+export async function request(options: $ReadOnly<RequestOptions>): Promise<Result> {
 
     // Escape path (RFC3986) and create the request URL
     let path = options.path.replace(/[:]/g, '_');
@@ -30,9 +32,9 @@ export async function request(options: $Readonly<RequestOptions>): Promise<Resul
     });
 
     // Create request settings
-    const request = {
+    const request: any = {
         headers,
-        method: options.method,
+        method: options.method
     };
 
     // If we specified to send requests with credentials, then we
@@ -61,7 +63,7 @@ export async function request(options: $Readonly<RequestOptions>): Promise<Resul
         // Otherwise we just convert request data to JSON string (needed for fetch api)
         if (options.body instanceof Blob) {
             request.body = options.body;
-            if (options.body.type) {
+            if (options.body && options.body.type) {
                 headers.append('Content-Type', options.body.type);
             }
         } else {

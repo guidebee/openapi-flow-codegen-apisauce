@@ -1,0 +1,21 @@
+[ignore]
+.*/flow-typed/.*
+.*/node_modules/.*
+
+[include]
+
+[lints]
+deprecated-utility=off
+
+[options]
+module.use_strict=true
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.less
+module.name_mapper='.*(.less)' -> '{}'
+module.name_mapper='^~' ->'<PROJECT_ROOT>/packages/core'
+esproposal.optional_chaining=enable
+esproposal.decorators=ignore
+experimental.enums=true
+
+[strict]

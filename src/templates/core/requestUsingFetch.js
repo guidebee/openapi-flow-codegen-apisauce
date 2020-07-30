@@ -54,7 +54,7 @@ function parseHeader(response: Response, responseHeader?: string): string | null
  * @param request The request object, containing method, headers, body, etc.
  * @param responseHeader The header we want to parse.
  */
-export async function requestUsingFetch(url: string, request: $Readonly<any>, responseHeader?: string): Promise<Result> {
+export async function requestUsingFetch(url: string, request: $ReadOnly<any>, responseHeader?: string): Promise<Result> {
 
     // Fetch response using fetch API.
     const response = await fetch(url, request);

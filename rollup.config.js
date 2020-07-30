@@ -35,6 +35,8 @@ function handlebarsPlugin() {
                     knownHelpers: {
                         equals: true,
                         notEquals: true,
+                        trimType: true,
+                        hasType: true,
                     },
                 });
                 return `export default ${templateSpec};`;

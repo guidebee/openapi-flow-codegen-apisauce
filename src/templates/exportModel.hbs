@@ -6,7 +6,11 @@
 
 {{#if imports}}
 {{#each imports}}
+{{#hasType this}}
+import type { {{{trimType this}}} } from './{{{trimType this}}}';
+{{else}}
 import { {{{this}}} } from './{{{this}}}';
+{{/hasType}}
 {{/each}}
 {{/if}}
 

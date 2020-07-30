@@ -14,7 +14,7 @@ export class ApiError extends Error {
     statusText: string;
     body: any;
 
-    constructor(result: $Readonly<Result>, message: string) {
+    constructor(result: $ReadOnly<Result>, message: string) {
         super(message);
 
         this.url = result.url;

@@ -105,7 +105,7 @@ export function getModel(openApi: OpenApi, definition: OpenApiSchema, isDefiniti
             model.base = additionalProperties.base;
             model.template = additionalProperties.template;
             model.imports.push(...additionalProperties.imports);
-            model.imports.push('Dictionary');
+            model.imports.push('type Dictionary');
             return model;
         } else {
             const additionalProperties = getModel(openApi, definition.additionalProperties);
@@ -115,7 +115,7 @@ export function getModel(openApi: OpenApi, definition: OpenApiSchema, isDefiniti
             model.template = additionalProperties.template;
             model.link = additionalProperties;
             model.imports.push(...additionalProperties.imports);
-            model.imports.push('Dictionary');
+            model.imports.push('type Dictionary');
             return model;
         }
     }

@@ -6,9 +6,14 @@
 
 {{#if imports}}
 {{#each imports}}
-import { {{{this}}} } from '../models/{{{this}}}';
+{{#hasType this}}
+import type { {{{trimType this}}} } from '../models/{{{trimType this}}}';
+{{else}}
+import { {{{this}}} } from './{{{this}}}';
+{{/hasType}}
 {{/each}}
 {{/if}}
+
 {{#if hasApiErrors}}
 import { ApiError, catchGenericError } from '../core/ApiError';
 {{else}}
