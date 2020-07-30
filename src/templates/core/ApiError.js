@@ -14,7 +14,7 @@ export class ApiError extends Error {
     statusText: string;
     body: any;
 
-    constructor(result: Readonly<Result>, message: string) {
+    constructor(result: $Readonly<Result>, message: string) {
         super(message);
 
         this.url = result.url;
@@ -24,7 +24,7 @@ export class ApiError extends Error {
     }
 }
 
-export type ApiError$Message = {
+export const ApiError$Message = {
     BAD_REQUEST: 'Bad Request',
     UNAUTHORIZED: 'Unauthorized',
     FORBIDDEN: 'Forbidden',
