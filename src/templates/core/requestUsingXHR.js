@@ -62,7 +62,7 @@ export async function requestUsingXHR(url: string, request: Readonly<RequestInit
 
         // Open the request, remember to do this before adding any headers,
         // because the request needs to be initialized!
-        xhr.open(request.method!, url, true);
+        xhr.open(request.method, url, true);
 
         // When request credentials are set to include then this is
         // the same behaviour as withCredentials = true in XHR:
@@ -70,7 +70,7 @@ export async function requestUsingXHR(url: string, request: Readonly<RequestInit
         xhr.withCredentials = request.credentials === 'include';
 
         // Add the headers (required when dealing with JSON)
-        const headers = request.headers as Headers;
+        const headers = request.headers;
         headers.forEach((value: string, key: string): void => {
             xhr.setRequestHeader(key, value);
         });
