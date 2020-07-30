@@ -7,8 +7,7 @@ hbs templates and core client logic that drive this generator. Cudos to @ferdiko
 [![NPM](https://badgen.net/npm/v/openapi-flow-codegen)](https://www.npmjs.com/package/openapi-flow-codegen)
 [![License](https://badgen.net/npm/license/openapi-flow-codegen)](https://www.npmjs.com/package/openapi-flow-codegen)
 [![Build Status](https://badgen.net/travis/tomsiwik/openapi-flow-codegen/master)](https://travis-ci.org/tomsiwik/openapi-flow-codegen)
-[![Codecov](https://codecov.io/gh/tomsiwik/openapi-flow-codegen/branch/master/graph/badge.svg)](https://codecov.io/gh/tomsiwik/openapi-flow-codegen)
-[![Quality](https://badgen.net/lgtm/grade/javascript/g/tomsiwik/openapi-flow-codegen)](https://lgtm.com/projects/g/tomsiwik/openapi-flow-codegen)
+[![codecov](https://codecov.io/gh/tomsiwik/openapi-typescript-codegen/branch/master/graph/badge.svg)](https://codecov.io/gh/tomsiwik/openapi-typescript-codegen)
 
 > NodeJS library that generates Flow clients based on the OpenAPI specification.
 
