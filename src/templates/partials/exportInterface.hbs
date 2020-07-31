@@ -15,8 +15,10 @@ export interface {{{name}}}{{>extends}} {
 }
 {{#if enums}}
 
-// FIXME: namespaces in flow?! no idea
-export namespace {{{name}}} {
+/**
+ * Flow-way of handling enums
+ */
+export const {{{name}}} = {
 
     {{#each enums}}
     {{#if description}}
@@ -24,11 +26,11 @@ export namespace {{{name}}} {
      * {{{description}}}
      */
     {{/if}}
-    export enum {{{name}}} {
+    {{{name}}}: {
         {{#each enum}}
-        {{{name}}} = {{{value}}},
+        {{{name}}}: {{{value}}},
         {{/each}}
-    }
+    },
 
     {{/each}}
 

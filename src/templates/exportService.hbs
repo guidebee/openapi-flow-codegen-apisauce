@@ -9,7 +9,7 @@
 {{#hasType this}}
 import type { {{{trimType this}}} } from '../models/{{{trimType this}}}';
 {{else}}
-import { {{{this}}} } from './{{{this}}}';
+import { {{{this}}} } from '../models/{{{this}}}';
 {{/hasType}}
 {{/each}}
 {{/if}}
@@ -51,6 +51,8 @@ export class {{{name}}} {
 
         const result = await __request({
             method: '{{{method}}}',
+
+            // $FlowFixMe
             path: `{{{path}}}`,
             {{#if parametersCookie~}}
             cookies: {
