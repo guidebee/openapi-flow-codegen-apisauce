@@ -1,6 +1,6 @@
 {
     "name": "openapi-flow-codegen",
-    "version": "0.4.13",
+    "version": "0.4.14",
     "description": "NodeJS library that generates Typescript or Javascript clients based on the OpenAPI specification.",
     "author": "Tom Siwik",
     "homepage": "https://github.com/tomsiwik/openapi-flow-codegen",
