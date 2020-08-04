@@ -19,18 +19,10 @@ hbs templates and core client logic that drive this generator. Cudos to @ferdiko
 - Supports OpenAPI specification v2.0 and v3.0.
 - Supports JSON and YAML files for input.
 
-
-## Known issues:
-- If you use enums inside your models / definitions then those enums are now
-  inside a namespace with the same name as your model. This is called declaration
-  merging. However, Babel 7 now supports compiling of Flow and right now they
-  do not support namespaces.
-
-
 ## Installation
 
 ```
-npm install openapi-typescript-codegen --save-dev
+npm install openapi-flow-codegen --save-dev
 ```
 
 ## Example
@@ -47,7 +39,7 @@ npm install openapi-typescript-codegen --save-dev
 **Command line**
 
 ```
-npm install openapi-typescript-codegen -g
+npm install openapi-flow-codegen -g
 
 openapi --input ./api/openapi.json --output ./dist
 ```
@@ -55,7 +47,7 @@ openapi --input ./api/openapi.json --output ./dist
 **NodeJS API**
 
 ```javascript
-const OpenAPI = require('openapi-typescript-codegen');
+const OpenAPI = require('openapi-flow-codegen');
 
 OpenAPI.generate({
     input: './api/openapi.json',
@@ -66,7 +58,7 @@ OpenAPI.generate({
 Or by providing the JSON directly:
 
 ```javascript
-const OpenAPI = require('openapi-typescript-codegen');
+const OpenAPI = require('openapi-flow-codegen');
 
 const spec = require('./api/openapi.json');
 
@@ -79,7 +71,7 @@ OpenAPI.generate({
 ## Features
 
 ### Argument-style vs. Object-style
-There's no [named parameter](https://en.wikipedia.org/wiki/Named_parameter) in Javascript or Typescript, because of
+There's no [named parameter](https://en.wikipedia.org/wiki/Named_parameter) in Javascript or Flow, because of
 that, we offer the flag `--useOptions` to generate code in two different styles.
 
 Argument-style:
@@ -252,19 +244,19 @@ that can help developers use more meaningful enumerators.
 
 Generated code:
 ```typescript
-enum EnumWithStrings {
+const EnumWithStrings = {
     /*
     * Used when the status of something is successful
     */
-    Success = 0,
+    Success: 0,
     /*
     * Used when the status of something has a warning
     */
-    Warning = 1,
+    Warning: 1,
     /*
     * Used when the status of something has an error
     */
-    Error = 2,
+    Error: 2,
 }
 ```
 
