@@ -21,5 +21,8 @@
         "rxjs": "6.5.5",
         "rxjs-compat": "6.5.5",
         "typescript": "3.9.5"
+    },
+    "dependencies": {
+        "apisauce": "^2.1.1"
     }
 }

@@ -15,9 +15,9 @@ import { {{{this}}} } from '../models/{{{this}}}';
 {{/if}}
 
 {{#if hasApiErrors}}
-import { ApiError, catchGenericError } from '../core/ApiError';
+import { ApiError, catchGenericError } from '../core/apiError';
 {{else}}
-import { catchGenericError } from '../core/ApiError';
+import { catchGenericError } from '../core/apiError';
 {{/if}}
 import { request as __request } from '../core/request';
 {{#if hasApiVersion}}

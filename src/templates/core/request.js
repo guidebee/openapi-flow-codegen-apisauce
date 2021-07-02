@@ -9,10 +9,11 @@ import { getQueryString } from './getQueryString';
 
 // $FlowFixMe
 import { OpenAPI } from './OpenAPI';
-import { RequestOptions } from './RequestOptions';
+import { RequestOptions } from './requestOptions';
 import { requestUsingFetch } from './requestUsingFetch';
 import { requestUsingXHR } from './requestUsingXHR';
-import { Result } from './Result';
+import { Result } from './result';
+import { requestUsingApisauce } from "./requestUsingApisauce";
 
 /**
  * Create the request.
@@ -76,6 +77,8 @@ export async function request(options: $ReadOnly<RequestOptions>): Promise<Resul
         switch (OpenAPI.CLIENT) {
             case 'xhr':
                 return await requestUsingXHR(url, request, options.responseHeader);
+            case 'apisauce':
+                return await requestUsingApisauce(url, request, options.responseHeader);
             default:
                 return await requestUsingFetch(url, request, options.responseHeader);
         }

@@ -4,10 +4,10 @@ This fork for flow code generation is inspired by the beautiful `openapi-typescr
 I kept the original code & documentation in tact as most of it supports flow as well. It's mostly the
 hbs templates and core client logic that drive this generator. Cudos to @ferdikoomen for making it so incredibly easy to port this for flow.
 
-[![NPM](https://badgen.net/npm/v/openapi-flow-codegen)](https://www.npmjs.com/package/openapi-flow-codegen)
-[![License](https://badgen.net/npm/license/openapi-flow-codegen)](https://www.npmjs.com/package/openapi-flow-codegen)
-[![Build Status](https://badgen.net/travis/tomsiwik/openapi-flow-codegen/master)](https://travis-ci.org/tomsiwik/openapi-flow-codegen)
-[![codecov](https://codecov.io/gh/tomsiwik/openapi-typescript-codegen/branch/master/graph/badge.svg)](https://codecov.io/gh/tomsiwik/openapi-typescript-codegen)
+[![NPM](https://badgen.net/npm/v/openapi-flow-codegen-apisauce)](https://www.npmjs.com/package/openapi-flow-codegen-apisauce)
+[![License](https://badgen.net/npm/license/openapi-flow-codegen-apisauce)](https://www.npmjs.com/package/openapi-flow-codegen-apisauce)
+[![Build Status](https://badgen.net/travis/guidebee/openapi-flow-codegen-apisauce/master)](https://travis-ci.org/guidebee/openapi-flow-codegen-apisauce)
+[![codecov](https://codecov.io/gh/guidebee/openapi-typescript-codegen/branch/master/graph/badge.svg)](https://codecov.io/gh/guidebee/openapi-typescript-codegen)
 
 > NodeJS library that generates Flow clients based on the OpenAPI specification.
 
@@ -22,7 +22,7 @@ hbs templates and core client logic that drive this generator. Cudos to @ferdiko
 ## Installation
 
 ```
-npm install openapi-flow-codegen --save-dev
+npm install openapi-flow-codegen-apisauce --save-dev
 ```
 
 ## Example
@@ -39,7 +39,7 @@ npm install openapi-flow-codegen --save-dev
 **Command line**
 
 ```
-npm install openapi-flow-codegen -g
+npm install openapi-flow-codegen-apisauce -g
 
 openapi --input ./api/openapi.json --output ./dist
 ```
@@ -47,7 +47,7 @@ openapi --input ./api/openapi.json --output ./dist
 **NodeJS API**
 
 ```javascript
-const OpenAPI = require('openapi-flow-codegen');
+const OpenAPI = require('openapi-flow-codegen-apisauce');
 
 OpenAPI.generate({
     input: './api/openapi.json',
@@ -58,7 +58,7 @@ OpenAPI.generate({
 Or by providing the JSON directly:
 
 ```javascript
-const OpenAPI = require('openapi-flow-codegen');
+const OpenAPI = require('openapi-flow-codegen-apisauce');
 
 const spec = require('./api/openapi.json');
 
@@ -276,6 +276,6 @@ OpenAPI.TOKEN = 'some-bearer-token';
 Depending on which swagger generator you use, you will see different output.
 For instance: Different ways of generating models, services, level of quality,
 HTTP client, etc. I've compiled a list with the results per area and how they
-compare against the openapi-flow-codegen.
+compare against the openapi-flow-codegen-apisauce.
 
-[Click here to see the comparison](https://htmlpreview.github.io/?https://github.com/tomsiwik/openapi-flow-codegen/blob/master/samples/index.html)
+[Click here to see the comparison](https://htmlpreview.github.io/?https://github.com/guidebee/openapi-flow-codegen-apisauce/blob/master/samples/index.html)

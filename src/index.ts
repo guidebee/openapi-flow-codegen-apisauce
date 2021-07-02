@@ -10,6 +10,7 @@ import { writeClient } from './utils/writeClient';
 export enum HttpClient {
     FETCH = 'fetch',
     XHR = 'xhr',
+    APISAUCE = 'apisauce',
 }
 
 export interface Options {

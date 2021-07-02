@@ -4,7 +4,7 @@
 /* eslint-disable */
 /* prettier-ignore */
 
-import { Result } from './Result';
+import { Result } from './result';
 
 /**
  * Try to parse the content for any response status code.

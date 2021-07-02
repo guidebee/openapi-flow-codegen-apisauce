@@ -1,6 +1,7 @@
 import * as path from 'path';
 
 import { Model } from '../client/interfaces/Model';
+import { camelize } from './camelCase';
 import { writeFile } from './fileSystem';
 import { format } from './format';
 import { Templates } from './registerHandlebarTemplates';
@@ -13,7 +14,7 @@ import { Templates } from './registerHandlebarTemplates';
  */
 export async function writeClientModels(models: Model[], templates: Templates, outputPath: string): Promise<void> {
     for (const model of models) {
-        const file = path.resolve(outputPath, `${model.name}.js`);
+        const file = path.resolve(outputPath, `${camelize(model.name)}.js`);
         const templateResult = templates.model(model);
         await writeFile(file, format(templateResult));
     }

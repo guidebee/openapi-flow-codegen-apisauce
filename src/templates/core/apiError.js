@@ -5,7 +5,7 @@
 /* prettier-ignore */
 
 import { isSuccess } from './isSuccess';
-import { Result } from './Result';
+import { Result } from './result';
 
 export class ApiError extends Error {
 

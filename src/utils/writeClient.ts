@@ -49,15 +49,16 @@ export async function writeClient(
 
     if (exportCore) {
         await mkdir(outputPathCore);
-        await copySupportFile('core/ApiError.js', outputPath);
+        await copySupportFile('core/apiError.js', outputPath);
         await copySupportFile('core/getFormData.js', outputPath);
         await copySupportFile('core/getQueryString.js', outputPath);
         await copySupportFile('core/isSuccess.js', outputPath);
         await copySupportFile('core/request.js', outputPath);
-        await copySupportFile('core/RequestOptions.js', outputPath);
+        await copySupportFile('core/requestOptions.js', outputPath);
         await copySupportFile('core/requestUsingFetch.js', outputPath);
         await copySupportFile('core/requestUsingXHR.js', outputPath);
-        await copySupportFile('core/Result.js', outputPath);
+        await copySupportFile('core/requestUsingApisauce.js', outputPath);
+        await copySupportFile('core/result.js', outputPath);
     }
 
     if (exportServices) {
@@ -73,7 +74,7 @@ export async function writeClient(
 
     if (exportModels) {
         await mkdir(outputPathModels);
-        await copySupportFile('models/Dictionary.js', outputPath);
+        await copySupportFile('models/dictionary.js', outputPath);
         await writeClientModels(client.models, templates, outputPathModels);
     }
 
