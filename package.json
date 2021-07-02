@@ -1,8 +1,8 @@
 {
     "name": "openapi-flow-codegen-apisauce",
-    "version": "0.4.14",
+    "version": "0.1.1",
     "description": "NodeJS library that generates Flow-typed Javascript clients based on the OpenAPI specification.",
-    "author": "Tom Siwik",
+    "author": "James Shen",
     "homepage": "https://github.com/guidebee/openapi-flow-codegen-apisauce",
     "repository": {
         "type": "git",

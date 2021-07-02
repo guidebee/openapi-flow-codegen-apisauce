@@ -1,8 +1,9 @@
-# OpenAPI Flow Codegen
+# OpenAPI Flow Codegen -- Added Apisauce
 
 This fork for flow code generation is inspired by the beautiful `openapi-typescript-codegen` package.
 I kept the original code & documentation in tact as most of it supports flow as well. It's mostly the
 hbs templates and core client logic that drive this generator. Cudos to @ferdikoomen for making it so incredibly easy to port this for flow.
+also changed the name convention to use camel case.
 
 [![NPM](https://badgen.net/npm/v/openapi-flow-codegen-apisauce)](https://www.npmjs.com/package/openapi-flow-codegen-apisauce)
 [![License](https://badgen.net/npm/license/openapi-flow-codegen-apisauce)](https://www.npmjs.com/package/openapi-flow-codegen-apisauce)
