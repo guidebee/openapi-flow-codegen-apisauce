@@ -25,6 +25,6 @@ describe('writeClientServices', () => {
 
         await writeClientServices(services, templates, '/', false);
 
-        expect(writeFile).toBeCalledWith('/Item.js', 'dummy');
+        expect(writeFile).toBeCalledWith('/item.js', 'dummy');
     });
 });

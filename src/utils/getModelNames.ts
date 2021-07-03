@@ -1,7 +1,8 @@
+import camelCase from 'camelcase';
+
 import { Model } from '../client/interfaces/Model';
-import { camelize } from './camelCase';
 import { sort } from './sort';
 
 export function getModelNames(models: Model[]): string[] {
-    return models.map(model => camelize(model.name)).sort(sort);
+    return models.map(model => camelCase(model.name)).sort(sort);
 }

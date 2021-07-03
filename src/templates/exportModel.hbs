@@ -7,9 +7,9 @@
 {{#if imports}}
 {{#each imports}}
 {{#hasType this}}
-import type { {{{trimType this}}} } from './{{{trimType this}}}';
+import type { {{{trimType this}}} } from './{{{camelCase this}}}';
 {{else}}
-import { {{{this}}} } from './{{{this}}}';
+import { {{{this}}} } from './{{{camelCase this}}}';
 {{/hasType}}
 {{/each}}
 {{/if}}

@@ -7,9 +7,9 @@
 {{#if imports}}
 {{#each imports}}
 {{#hasType this}}
-import type { {{{trimType this}}} } from '../models/{{{trimType this}}}';
+import type { {{{trimType this}}} } from '../models/{{{camelCase this}}}';
 {{else}}
-import { {{{this}}} } from '../models/{{{this}}}';
+import { {{{this}}} } from '../models/{{{camelCase this}}}';
 {{/hasType}}
 {{/each}}
 {{/if}}

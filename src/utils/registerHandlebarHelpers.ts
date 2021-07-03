@@ -1,3 +1,4 @@
+import camelCase from 'camelcase';
 import * as Handlebars from 'handlebars/runtime';
 
 export function registerHandlebarHelpers(): void {
@@ -15,6 +16,10 @@ export function registerHandlebarHelpers(): void {
     });
     Handlebars.registerHelper('trimType', function (passedString: string) {
         // @ts-ignore
-        return new Handlebars.SafeString(passedString.substring(5));
+        return new Handlebars.SafeString(passedString.trim());
+    });
+    Handlebars.registerHelper('camelCase', function (passedString: string) {
+        // @ts-ignore
+        return new Handlebars.SafeString(camelCase(passedString.trim()));
     });
 }

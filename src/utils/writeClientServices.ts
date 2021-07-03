@@ -1,7 +1,7 @@
+import camelCase from 'camelcase';
 import * as path from 'path';
 
 import { Service } from '../client/interfaces/Service';
-import { camelize } from './camelCase';
 import { writeFile } from './fileSystem';
 import { format } from './format';
 import { Templates } from './registerHandlebarTemplates';
@@ -17,7 +17,7 @@ const VERSION_TEMPLATE_STRING = 'OpenAPI.VERSION';
  */
 export async function writeClientServices(services: Service[], templates: Templates, outputPath: string, useOptions: boolean): Promise<void> {
     for (const service of services) {
-        const file = path.resolve(outputPath, `${camelize(service.name)}.js`);
+        const file = path.resolve(outputPath, `${camelCase(service.name)}.js`);
         const hasApiErrors = service.operations.some(operation => operation.errors.length);
         const hasApiVersion = service.operations.some(operation => operation.path.includes(VERSION_TEMPLATE_STRING));
         const templateResult = templates.service({

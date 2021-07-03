@@ -37,6 +37,7 @@ function handlebarsPlugin() {
                         notEquals: true,
                         trimType: true,
                         hasType: true,
+                        camelCase: true,
                     },
                 });
                 return `export default ${templateSpec};`;
