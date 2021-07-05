@@ -26,6 +26,11 @@ also changed the name convention to use camel case.
 npm install openapi-flow-codegen-apisauce --save-dev
 ```
 
+## Apisauce configuration
+```angular2html
+OpenAPI.CLIENT = 'apisauce';
+```
+
 ## Example
 
 **package.json**
