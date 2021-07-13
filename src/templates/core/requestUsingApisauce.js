@@ -26,7 +26,6 @@ export async function requestUsingApisauce(url: string, request: $ReadOnly<any>,
         headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
-            ...request.headers
         },
     });
     const apis ={
@@ -38,6 +37,11 @@ export async function requestUsingApisauce(url: string, request: $ReadOnly<any>,
         'head':api.head,
         'patch':api.patch,
     }
+
+    const headers = request.headers;
+    headers.forEach((value: string, key: string): void => {
+        api.setHeader(key,value);
+    });
     const response = await apis[request.method](url,request.body);
 
 
